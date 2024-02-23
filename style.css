@@ -1,0 +1,132 @@
+:root {
+    --primary-blue: #4472C4;
+    --primary-green: #70AD47;
+    --border-blue: #2F528F;
+    --border-green: #507E32;
+    --border-radius: 5px;
+    --font-family-default: sans-serif;
+}
+
+
+
+body {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family-default);
+}
+
+.leftColumn, .container, #cepFieldsContainer, .inputCepBox, .buttonsBox, #resultsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftColumn, #cepFieldsContainer {
+    gap: 30px;
+}
+
+.inputCEP{
+    border: 1px solid grey;
+}
+
+.inputCepBox, #resultsContainer {
+    gap: 10px;
+}
+
+.buttonsBox{
+    gap: 30px;
+}
+
+.container {
+    flex-flow: wrap;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.inputAndremoveIcon, .inputCepBox input, .buttonsBox button {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.inputCepBox input, .buttonsBox button {
+    border-radius: var(--border-radius);
+    padding: 18px 0 18px 15px;
+    width: 283px;
+}
+
+#addCEPBtn, #consultBtn {
+    color: white;
+    border-radius: var(--border-radius);
+    place-content: center;
+    cursor: pointer;
+}
+
+#addCEPBtn {
+    background: var(--primary-blue);
+    border: 1px solid var(--border-blue);
+    width: 150px;
+    padding: 5px 0;
+}
+
+#consultBtn {
+    background: var(--primary-green);
+    border: 1px solid var(--border-green);
+    padding: 15px 0;
+    width: 300px;
+}
+
+.removeIcon {
+    display: inline;
+    height: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 375px){
+    .removeIcon {
+        position: absolute;
+        right: 25px;
+    }
+}
+
+
+/* Realizei algumas modificações na aparencia onde os resultados das consultas são exibidos, espero que não tenha fugido da ideia principal! */
+details {
+    position: relative;
+    border: 2px solid transparent; 
+    border-radius: 8px;
+    padding: 10px;
+    transition: border-color 0.5s ease-in-out;
+    overflow: hidden;
+  }
+  
+  details summary {
+    cursor: pointer;
+    outline: none;
+  }
+
+  details::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--border-blue);
+    transition: width 0.3s ease-in-out;
+  }
+
+  details:hover::before {
+    width: 100%;
+  }
+
+  details[open]::before {
+    width: 100%;
+  }
+  
+  
+  details[open] {
+    border: 2px solid var(--border-blue);
+  }
+  

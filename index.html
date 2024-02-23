@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Consulta de CEP</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="leftColumn">
+            <h2>Informe os dados para consulta</h2>
+
+            <div id="cepFieldsContainer">
+                <div class="inputCepBox" id="inputCepBox1">
+                    <label for="inputCEP1">CEP</label>
+                    <div class="inputAndremoveIcon">
+                        <input id="inputCEP1" type="text" placeholder="00.000-000" class="inputCEP">
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttonsBox">
+                <button id="addCEPBtn" type="button">Adicionar CEP</button>
+                <button id="consultBtn" type="button">Consultar</button>
+            </div>
+        </div>
+
+        <div class="rightColumn">
+            <h2>Resultado da consulta</h2>
+            <div id="resultsContainer">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
